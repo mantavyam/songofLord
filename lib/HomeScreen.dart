@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
         width: MediaQuery.of(context).size.width,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/bg.jpg"),
+            image: AssetImage("assets/bg1.jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -73,6 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.white,
                       fontSize: 15,
                       fontStyle: FontStyle.italic,
+                      height: 1.10,
                     ),
                   ),
                 ],
@@ -82,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Padding(
-                  padding: EdgeInsets.only(left: 20, bottom: 20),
+                  padding: EdgeInsets.only(left: 20, bottom: 10),
                   child: Text(
                     'All Chapters',
                     style: TextStyle(
@@ -92,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 400,
+                  height: 325,
                   child: PageView.builder(
                     itemCount: paintings.length,
                     controller: pageController,
@@ -120,8 +121,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                   paintings[i].name,
                                   style: const TextStyle(
                                     color: Colors.white,
-                                    fontSize: 35,
+                                    fontSize: 25,
                                     fontStyle: FontStyle.italic,
+                                    height: 1,
                                   ),
                                 ),
                               ),
